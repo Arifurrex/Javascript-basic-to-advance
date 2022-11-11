@@ -374,3 +374,10 @@ function outerFunction(outerVariable) {
 const newFunction = outerFunction('outside');
 newFunction("inner");
 
+
+
+//? const newFunction = outerFunction('outside');
+// todo const newFunction = outerFunction('outside');
+// ! const newFunction = outerFunction('outside');
+// // const newFunction = outerFunction('outside');
+// * const newFunction = outerFunction('outside');
