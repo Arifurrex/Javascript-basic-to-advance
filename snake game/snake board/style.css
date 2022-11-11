@@ -1,0 +1,26 @@
+.grid{
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    border: 1px solid royalblue;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid div{
+    height: 40px;
+    width: 40px;
+    /* background: red; */
+    border:1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.snake{
+    background:hsl(240, 100%, 70%);
+}
+.apple{
+    background:yellow;
+    border-radius: 20px;
+}

@@ -1,0 +1,9 @@
+.tracker{
+    position: fixed;
+    width: 100%;
+    inset: 0 0 auto; /* inset is shorthand of top bottom left right */
+    height: 2rem;
+    background-color:hsl(270, 100%, 50%);
+    
+    
+}
