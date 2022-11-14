@@ -105,10 +105,9 @@ for (let i = 1; i <= 10; i++){
 
 function multiplication(x, y) {
     let result = '\n'
-    for (let i = x; i <= 3; i++) {
+    for (let i = x; i <= 10; i++) {
         for (let j = y; j <= 10; j++) {
-            m = (i * j);
-            console.log(m);
+            result += (i * j) + '';
         }
     }
     return result += '\n';
@@ -116,6 +115,99 @@ function multiplication(x, y) {
 console.log(multiplication(2, 1));
 console.log(multiplication(3, 1));
 
+// হয় নাই আবার ডেকবে
+
+// ! Coding challenge #5: Calculate the sum of numbers from 1 to 10
+function sum() {
+    let sum =0;
+    for (let i = 0; i <= 10; i++) {
+        sum += i;
+        console.log(i);
+    }
+    return sum;
+}
+console.log(sum()); // 55
+
+// !Coding challenge #6: Calculate 10!
+function multiple() {
+    let multiple = 1;
+    for (let i = 1; i <= 10; i++) {
+        multiple *= i;
+        console.log(i);
+    }
+    return multiple;
+}
+console.log(multiple()); // 3628800
+
+
+// ! Coding challenge #7: find of odd numbers greater than 10 and less than 30
+
+function greaterLaser() {
+    let result =0;
+    for (i = 0; i <= 30; i++){
+        if (i % 2 !== 0) {
+            if (i > 10 && i < 30) {
+                console.log(i);
+                result = i;
+            }
+          
+        }
+    }
+    return result;
+}
+console.log(greaterLaser());
+
+// return stop loop
+function greaterLaser2(laser,greater) {
+    for (i = laser; i <= greater; i++) {
+        console.log(i);
+        return i;
+    }
+}
+console.log(greaterLaser2(11, 30));
+
+
+//! is retrun stop loop
+function returnMe() {
+    for (var i = 0; i < 2; i++) {
+        if (i === 1) return i;
+    }
+}
+
+console.log(returnMe());
+
+
+// with array 
+function greaterLaser2(laser, greater) {
+    let values = [];
+    for (i = laser; i <= greater; i++) {
+        console.log(i);
+        values.push(i);
+    }
+    return values;
+}
+console.log(greaterLaser2(11, 30));
+
+// while its return array amake it string again 
+function greaterLaser3(laser, greater) {
+    let values = [];
+    for (i = laser; i <= greater; i++) {
+        console.log(i);
+        values.push(i)
+    }
+    return values.toString();
+}
+console.log(greaterLaser3(11, 30));
+
+// find with
 
 
 
+
+
+
+
+
+
+
+         
