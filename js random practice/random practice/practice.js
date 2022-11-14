@@ -381,3 +381,52 @@ newFunction("inner");
 // ! const newFunction = outerFunction('outside');
 // // const newFunction = outerFunction('outside');
 // * const newFunction = outerFunction('outside');
+
+
+// ! Object References vs Values
+// * passed by value
+nam1 = "arifur";
+console.log(name1); //arifur
+
+nam2 = nam1;
+console.log(nam2);
+
+nam2 = "rahman";
+console.log(nam1 == nam2); //false
+
+
+// * passed by reference
+peson1 = {};
+console.log(peson1); // {}
+
+peson2 = peson1;
+console.log(peson2); // {}
+
+peson2.name = "arifur";
+console.log(peson2);  // {name: 'arifur'}
+
+console.log(peson2 == peson1); //true
+/* 
+ peson2.name = "arifur"; 
+ যখন peson2 তে property and value add korchi
+ তখনই peson1 , peson2  eksate update hoye geche
+ */
+
+
+//! nested object
+myObj = {
+    name: "arifur",
+    age: 30,
+    cars: {
+        car1: 'volvo',
+        car2: 'toyota', 
+        car3: 'voxy'
+    }
+}
+console.log(myObj.cars.car1);  //volvo
+// console.log(myObj.[cars]car1);
+console.log(myObj['cars'].car1); // volvo
+// console.log(myObj[cars][car1]); // 
+console.log(myObj['cars']['car1']);  //volvo
+// console.log(myObj.cars.['car1']);
+console.log(myObj.cars['car1']); //volvo

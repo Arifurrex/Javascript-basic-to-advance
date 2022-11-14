@@ -78,9 +78,43 @@ console.log(reverse(sentence));
 // ! Challenge # 4 — Generating all permutations
 
 
+// ! Coding challenge #1: Print numbers from 1 to 10
+for (let i = 1; i <= 10; i++){
+    console.log(i); // 1 2 3 4 5 6 7 8 9 10
+}
 
+// ! Coding challenge #2: Print the odd(বিয়োগ) numbers less than 10
+for (let i = 0; i < 10; i++){
 
+    if (i % 2 !== 0) {
+        console.log(i); // 1, 3, 5, 7, 9
+    }
+}
 
+// another way 
+for (let i = 1; i <= 10; i += 2){
+    console.log(i); // 1, 3, 5, 7, 9
+}
+
+// ! Coding challenge #3: Print the multiplication table with 7 (৭ এর নামতা )
+for (let i = 1; i <= 10; i++){
+    console.log(7 * i); // 7, 14, 21, 28, 35, 42, 49, 56, 63, 70
+}
+
+// !Coding challenge #4: Print all the multiplication tables with numbers from 1 to 10
+
+function multiplication(x, y) {
+    let result = '\n'
+    for (let i = x; i <= 3; i++) {
+        for (let j = y; j <= 10; j++) {
+            m = (i * j);
+            console.log(m);
+        }
+    }
+    return result += '\n';
+}
+console.log(multiplication(2, 1));
+console.log(multiplication(3, 1));
 
 
 
