@@ -199,15 +199,99 @@ function greaterLaser3(laser, greater) {
 }
 console.log(greaterLaser3(11, 30));
 
-// find with
+// ! LeetCode #9 - Palindrome Number
+
+var isPalindrome = function (x) {
+    // Base condition
+    if (x < 0) {
+        return false;
+    }
+    // Store the number in a variable
+    let number = x;
+    // This will store the reverse of the number
+    let reverse = 0;
+    while (number > 0) {
+        reverse = reverse * 10 + number % 10;
+        number = parseInt(number / 10);
+    }
+    return x === reverse;
+};
+console.log(isPalindrome(-123));
 
 
+// !Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+
+var romanToInt = function (s) {
+    switch (s) {
+        case 'I':
+            console.log('one');
+            break;
+        case 'II':
+            console.log('two'); 
+            break;
+        case 'III':
+            console.log('three');
+            break;
+        case 'V':
+            console.log('five');
+            break;
+        case 'VI':
+            console.log('six');
+            break;
+        case 'VII':
+            console.log('seven');
+            break;
+        case 'X':
+            console.log('ten');
+            break;
+    }
+}
+
+romanToInt('II');
 
 
-
-
-
-
-
-
+//! another way
+var romanToInt2 = function (s) {
+    const obj = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+    let res = 0;
+    console.log(s.split(''));
+    s.split('').forEach((x,y)=> {
+        if (obj[x] < obj[s[y + 1]]) {
+            res -= obj[x];
+        } else {
+            res += obj[x]
+     }        
+    });
+    return res;
+}
          
+console.log(romanToInt2("VIII"));
+
+//! leetcode 14. Longest Common Prefix
+
+let strs = ["flower", "flow", "flight"];
+
+var longestCommonPrefix = function (strs) {
+    let longestCommonPrefix = "";
+    if (strs == null && strs.length == 0) {
+        return longestCommonPrefix;
+    }
+
+    let minimumLength = strs[0].length;
+    console.log(minimumLength);
+    
+    strs.forEach((x, y) => {
+        console.log(x.split(''));
+    });
+   
+
+};
+longestCommonPrefix(strs);
