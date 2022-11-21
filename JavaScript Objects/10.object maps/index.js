@@ -1,4 +1,5 @@
 // ! JavaScript Maps
+//Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
 /* 
 set এর সাথে মিল আছে হল array 
 set হল unique value collection 
@@ -7,6 +8,8 @@ set হল unique value collection
 map এর সাথে মিল আছে object
 map এর key value paire থাকে 
 আর object এ key value paire থাকে 
+object key only string হয়ে থাকে 
+আর map এর key any data type হয়ে থাকে 
 
 A Map holds key-value pairs where the keys can be any datatype.
 A Map remembers the original insertion order of the keys.
@@ -81,12 +84,13 @@ Create a Map and use Map.set()
 
 // Create a Map
 const fruits = new Map([
-    ["apples", 500],
-    ["bananas", 300],
-    ["oranges", 200]
+    ["1", "str1"],
+    [1, "num"],
+    [true, "bool1"]
 ]);
 console.log(fruits);
-// Map(3) {'apples' => 500, 'bananas' => 300, 'oranges' => 200}
+// Map(3) {'1' => 'str1', 1 => 'num', true => 'bool1'}
+
 
 
 //! Map.set()
@@ -193,6 +197,26 @@ letter.forEach(function (value) {
 });
 
 console.log(txt); // a b c
+
+
+//! Map.entries()
+// The entries() method returns an iterator object with the[key, values] in a Map:
+const letter0 = new Map([
+    ['a', 400],
+    ['b', 300],
+    ['c', 800]
+]);
+console.log(letter0.entries())
+// MapIterator {'a' => 400, 'b' => 300, 'c' => 800}
+
+let txt0 = "";
+for (const x of letter0.entries()) {
+    txt0 += x;
+}
+console.log(txt0); // a,400b,300c,800
+// key and value 2tai return kore map e
+//set er entries() e [value,value] return kore instade of [key,value]
+
 
 
 

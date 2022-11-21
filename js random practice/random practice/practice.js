@@ -381,3 +381,121 @@ newFunction("inner");
 // ! const newFunction = outerFunction('outside');
 // // const newFunction = outerFunction('outside');
 // * const newFunction = outerFunction('outside');
+
+
+// ! Object References vs Values
+// * passed by value
+nam1 = "arifur";
+console.log(name1); //arifur
+
+nam2 = nam1;
+console.log(nam2);
+
+nam2 = "rahman";
+console.log(nam1 == nam2); //false
+
+
+// * passed by reference
+peson1 = {};
+console.log(peson1); // {}
+
+peson2 = peson1;
+console.log(peson2); // {}
+
+peson2.name = "arifur";
+console.log(peson2);  // {name: 'arifur'}
+
+console.log(peson2 == peson1); //true
+/* 
+ peson2.name = "arifur"; 
+ যখন peson2 তে property and value add korchi
+ তখনই peson1 , peson2  eksate update hoye geche
+ */
+
+
+//! nested object
+myObj = {
+    name: "arifur",
+    age: 30,
+    cars: {
+        car1: 'volvo',
+        car2: 'toyota', 
+        car3: 'voxy'
+    }
+}
+console.log(myObj.cars.car1);  //volvo
+// console.log(myObj.[cars]car1);
+console.log(myObj['cars'].car1); // volvo
+// console.log(myObj[cars][car1]); // 
+console.log(myObj['cars']['car1']);  //volvo
+// console.log(myObj.cars.['car1']);
+console.log(myObj.cars['car1']); //volvo
+
+//! string method
+
+// length
+let str0 = "i love bangladesh i";
+console.log(str0.length);
+console.log(str0.slice(2, 5)); //not include las index so ans lov
+console.log(str0.slice(5)); // 5 theke baki sob index nebe
+console.log(str0.slice(-5)); // last er dik theke count korbe
+// slice o substring er modde different holo revese count hoi na 
+console.log(str0.substring(2, 5));
+console.log(str0.substring(5));
+console.log(str0.substring(-5)); // reverse hoi na
+//substr er modde differnt holo reverse er second pareameter nicher moto kaj korbe\
+console.log(str0.substr(2, 5));
+console.log(str0.replace('love', 'hate')); //replace only first match
+console.log(str0.replaceAll('i', 'me')); // sobgolo replace hoye geche
+console.log(str0.toUpperCase());
+console.log(str0.toLowerCase());
+console.log(str0.concat("i love my mother"));
+console.log(str0.trim());
+console.log(str0.charAt(5));
+console.log(str0.charCodeAt(5));
+console.log(str0.split());
+console.log(str0.split(' '));
+console.log(str0.split(''));
+console.log(str0.toString());
+console.log(str0.indexOf('love'));
+console.log(str0.indexOf('bangladesh'));
+console.log(str0.lastIndexOf('i'));
+console.log(str0.search(/love/ig));
+console.log(str0.search(/i/ig));
+console.log(str0.match(/i/ig));
+console.log(str0.matchAll(/i/ig));
+console.log(str0.includes("bangladesh"));
+console.log(str0.includes("usa"));
+
+//! number
+console.log(9999999999999999);
+console.log(999999999999999);
+console.log(0.3 + 0.2);
+console.log(0.1 + 0.2);
+console.log(((0.1 * 10) + (0.2 * 10)) / 10); 
+
+// ! object
+const objc = {};
+objc.fname = "arifur";
+objc['lname'] = "rahman";
+objc.fullname = function(){return this.fname + this.lname};
+console.log(objc);
+console.log(objc.fullname());
+
+// object this 
+const per = {
+    fname : "rahman",
+    lname : "arifur",
+    fullname: function () {
+        return this;
+    }
+}
+console.log(per);
+console.log(per.fullname());
+
+
+ 
+
+
+
+
