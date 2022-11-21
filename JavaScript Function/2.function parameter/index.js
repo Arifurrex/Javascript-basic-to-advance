@@ -130,6 +130,17 @@ console.log(p2(3));
 // ! Function Rest Parameter
 // The rest parameter(...) allows a function to treat an indefinite number of arguments as an array:
 
+function sum (...arg) {
+    console.log(...arg);  // 2 4 5 6 7 8 8 9 6
+    let sum = 0;
+    for (let x of arg) {
+        console.log(x);
+        sum += x;
+    }
+    return sum;
+}
+let y = sum(2, 4, 5, 6, 7, 8, 8, 9, 6);
+console.log(y); // 55
 
 // !The Arguments Object
 /* 
@@ -156,7 +167,7 @@ Symbol(Symbol.iterator): ƒ values()
 
 */
 
-// * array of the arguments 
+// * array of the arguments
 /*
  Arguments(2)[3, 6, callee: ƒ, Symbol(Symbol.iterator): ƒ]
 0:3
@@ -164,9 +175,42 @@ Symbol(Symbol.iterator): ƒ values()
 
  */
 
+// If a function is called with too many arguments (more than declared), these arguments can be reached using the arguments object.
 
 
+// ! Arguments are Passed by Value
+/* 
+The parameters, in a function call, are the function's arguments.
+JavaScript arguments are passed by value: The function only gets to know the values, not the argument's locations.
+If a function changes an argument's value, it does not change the parameter's original value.
+Changes to arguments are not visible (reflected) outside the function.
+*/
+function pass(x, y) {
+    x = x * 5;
+    console.log(x); // 25
+    return x * y;
+}
+let m = 5;
+let n = 6;
+console.log(pass(m,n)); // 150
+
+console.log(m); // 5
 
 
-
-
+// ! Objects are Passed by Reference
+/* 
+In JavaScript, object references are values.
+Because of this, objects will behave like they are passed by reference:
+If a function changes an object property, it changes the original value.
+Changes to object properties are visible (reflected) outside the function.
+*/
+function ref(a) {
+    a.name = "rahman"; // mutate kore dilam 
+    return a;
+}
+const a = {
+    name: 'arifur',
+    age:32
+}
+console.log(a); // {name : 'arifur' , age: 32}
+console.log(ref(a)); //{name: 'rahman' ,age:32}
