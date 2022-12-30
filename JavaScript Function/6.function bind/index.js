@@ -32,10 +32,11 @@ let parrot2 = {
     name:"parrot",
 }
 
-bark = speak.bind(dog, "barking");
-chirp = speak.bind(dog, "barking");
+bark = speak.bind(dog2, "barking");
+chirp = speak.bind(parrot2, "chirping");
 
 bark();
+chirp();
 
 
 

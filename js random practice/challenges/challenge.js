@@ -289,7 +289,8 @@ var longestCommonPrefix = function (strs) {
     console.log(minimumLength);
     
     strs.forEach((x, y) => {
-        console.log(x.split(''));
+        console.log(x.toString().split(' '));
+        
     });
    
 
