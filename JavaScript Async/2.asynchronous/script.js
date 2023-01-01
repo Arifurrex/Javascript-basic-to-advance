@@ -1,8 +1,9 @@
 // sychronous js .bydefault js sychronous
+
 console.log('line 1'); // line 1
 console.log('line 2'); // line 2
-console.log('line 3'); //line 3
-console.log('line 4'); //line 4
+console.log('line 3'); // line 3
+console.log('line 4'); // line 4
 
 /* 
 "I will finish later!"
